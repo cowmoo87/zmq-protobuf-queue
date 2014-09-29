@@ -1,5 +1,5 @@
-zmq-protobuf-queue README file
-=====================
+zmq-protobuf-queue 
+==================
  
 zmq-protobuf-queue is an Java implementation of zeromq queues that transports google protobuf messages. 
 I committed this project to Github as I found a lot of examples of zeromq and protobuf RPC implementations here on Github,
@@ -71,5 +71,5 @@ Distribution Structure
 - src/pubsub    	-- Pubsub implementation.
 - src/rpc    		-- RPC implementation.
 - src/taskqueue   	-- Task queue (push-pull) implementation.
-- lib				-- Libarary of external java jar dependencies
+- lib				-- Libarary of external java jar dependencies.
 - proto				-- Protobuf service definitions.
