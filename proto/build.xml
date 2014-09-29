@@ -1,0 +1,15 @@
+<project basedir =".">
+        <property name="javasrc-dir" value="../src" />
+	
+        <path id="protopath">
+                <fileset dir="." includes="*.proto" />
+        </path>
+
+        <target name="generate">
+                <apply executable="protoc" parallel="true">
+                        <arg value="--proto_path=${user.dir}" />
+                        <arg value="--java_out=${javasrc-dir}" />
+                        <fileset dir="." includes="*.proto" />
+                </apply>
+        </target>
+</project>

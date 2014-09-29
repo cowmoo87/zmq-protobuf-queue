@@ -1,0 +1,50 @@
+<project basedir =".">
+	<target name="clean">
+		<delete dir="classes" />
+	</target>
+	
+	<property name="jzmq" value="/usr/local/lib" />
+	<property name="rpc-example-class" value="examples.rpc.SayHello" />
+	<property name="pubsub-example-class" value="examples.pubsub.WeatherMain" />
+	<property name="taskqueue-example-class" value="examples.taskqueue.WordCountMaster" />
+	
+	<path id="classpath">
+		<fileset dir="lib" includes="**/*.jar" />
+	</path>
+
+	<target name="compile">
+		<mkdir dir ="classes" />
+		<javac srcdir="src" destdir="classes" classpathref="classpath"/>
+	</target>
+
+	<target name="run-rpc" depends="compile">
+		<java fork="true" classname="${rpc-example-class}">
+			<sysproperty key="java.library.path" path="${jzmq}" />
+			<classpath>
+				<path refid="classpath" />
+				<path location="classes"/>
+			</classpath>
+		</java>
+	</target>
+	
+	<target name="run-pubsub" depends="compile">
+		<java fork="true" classname="${pubsub-example-class}">
+			<sysproperty key="java.library.path" path="${jzmq}" />
+			<classpath>
+				<path refid="classpath" />
+				<path location="classes"/>
+			</classpath>
+		</java>
+	</target>
+	
+	<target name="run-taskqueue" depends="compile">
+		<java fork="true" classname="${taskqueue-example-class}">
+			<sysproperty key="java.library.path" path="${jzmq}" />
+			<classpath>
+				<path refid="classpath" />
+				<path location="classes"/>
+			</classpath>
+		</java>
+	</target>
+	
+</project>
