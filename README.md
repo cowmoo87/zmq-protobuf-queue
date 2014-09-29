@@ -3,11 +3,11 @@ zmq-protobuf-queue
  
 zmq-protobuf-queue is an Java implementation of zeromq queues that transports google protobuf messages. 
 I committed this project to Github as I found a lot of examples of zeromq and protobuf RPC implementations here on Github,
-but not examples for zeromq publisher-subscriber nor pusher-pull (distributed task queue) implementations.  
+but no examples for zeromq publisher-subscriber nor pusher-pull (distributed task queue) models.  
 
 You can find examples of each queue model (RPC, pub-sub, push-pull) in the example directory. zmq is a light-weight, 
-brokerless queuing solution compared to its counterparts such as RabbitMQ or ActiveMQ. It is my hope that my project 
-can shed light on other people looking into using a more OOP and service-oriented architecture usage of zmq in Java.
+brokerless queuing solution, compared to its counterparts such as RabbitMQ or ActiveMQ. It is my hope that my project 
+can shed light for people looking for a more OOP and service-oriented architecture usage of zmq in Java.
 Please feel free to look up my implementation and adapt it to your use. 
 
 
@@ -58,7 +58,7 @@ in the root build.xml to point to the right local library path.
 Contributing, Patching
 =========================
 
-Feel free to fork, submit a pull request or copy the code contained here. 
+Feel free to fork, submit a pull request or copy the all the code shown here. 
 
 
 Distribution Structure
